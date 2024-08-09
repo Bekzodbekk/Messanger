@@ -1,7 +1,6 @@
 import React from 'react'
 import "./directItem.scss"
 import Avatar from '../Avatar/Avatar'
-import userData from "../../../Database/Directs.json"
 
 const DirectItem = (props) => {
 

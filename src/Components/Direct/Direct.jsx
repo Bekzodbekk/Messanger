@@ -14,7 +14,7 @@ const Direct = (props) => {
     });
 
     return (
-        <div style={{ display: props.user == 0 ? 'none' : 'flex' }} className='direct__container'>
+        <div style={{ display: props.user === 0 ? 'none' : 'flex' }} className='direct__container'>
             <div className="direct__nav">
                 <div className="info">
                     <Avatar />
@@ -35,7 +35,7 @@ const Direct = (props) => {
             <div className="direct__messages">
                 <div className="messages">
                     {filteredMessages.map((elm, idx) => (
-                        <Message key={idx} className={elm.sender_id == props.myAccount.id ? "my__message": ""} msg={elm.message}/>
+                        <Message key={idx} className={elm.sender_id === props.myAccount.id ? "my__message": ""} msg={elm.message}/>
                     ))}
                 </div>
                 <div className="input__message">
