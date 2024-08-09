@@ -1,0 +1,34 @@
+@import "../../../vars";
+
+.direct__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    border-radius: 10px;
+    &:hover{
+        background-color: rgba(128, 128, 128, 0.137);
+        cursor: pointer;
+    }
+    .account_info_container{
+        display: flex;
+        align-items: center;
+        
+        .direct__item__info{
+            margin-left: 14px;
+            .full__name{
+                font-size: 18px;
+                color: $white;
+            }
+            .message{
+                font-size: 13px;
+                color: $gray100;
+            }
+        }
+    }
+    .direct__message__info{
+        .message__time{
+            color: $gray100;
+        }
+    }
+}

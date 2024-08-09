@@ -1,0 +1,102 @@
+@import "../../vars";
+
+.nav__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 75px;
+    padding: 30px 24px 30px 24px;
+    border-right: 1px solid $gray50;
+
+    .menu__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        span {
+            background-color: $gray50;
+            height: 3px;
+            width: 80%;
+        }
+
+        .menus {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            &>* {
+                i {
+                    cursor: pointer;
+                    color: $gray100;
+                    font-size: 17px;
+                    transition: .1s linear;
+
+                    &:hover {
+                        color: $orange;
+                    }
+
+                    &.active{
+                        color: $orange;
+                    }
+                }
+            }
+        }
+
+        .me__menus {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            gap: 25px;
+
+            &>* {
+                i {
+                    cursor: pointer;
+                    color: $gray100;
+                    font-size: 17px;
+                    transition: .1s linear;
+
+                    &:hover {
+                        color: $orange;
+                    }
+                }
+            }
+        }
+
+        .logo {
+            margin-bottom: 20px;
+
+            img {
+                height: 30px;
+                width: 30px;
+            }
+        }
+
+    }
+    .mode__interface{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+        background: $gray50;
+        padding: 10px;
+        border-radius: 30px;
+        border: 1px solid #353535;
+        & > *{
+            cursor: pointer;
+            i {
+                transition: .1s linear;
+                font-size: 17px;
+                &:hover{
+                    color: $purple !important;
+                }
+            }
+        }
+    }
+}

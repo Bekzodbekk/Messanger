@@ -1,0 +1,80 @@
+// direct.scss
+@import "../../vars";
+
+.direct__container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; // Yoki kerakli aniq balandlik
+    justify-content: space-between;
+
+    .direct__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $gray100;
+        padding: 10px 20px;
+
+        .info {
+            display: flex;
+            color: $white;
+            font-size: 9px;
+
+            .direct_info {
+                margin-left: 20px;
+
+                .status > p {
+                    color: $gray100;
+                    font-size: 11px;
+                }
+            }
+        }
+
+        .direct__mini__btns {
+            display: flex;
+            gap: 30px;
+            i {
+                color: $gray100;
+                font-size: 18px;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    .direct__messages {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        .messages {
+            flex: 1;
+            overflow-y: auto;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
+
+        .input__message {
+            display: flex;
+            align-items: center;
+            background-color: $gray50;
+            margin: 20px 20px;
+            border-radius: 20px;
+            padding: 0 20px;
+
+            input {
+                background-color: transparent;
+                border: none;
+                height: 50px;
+                width: 100%;
+                outline: none;
+                font-size: 15px;
+                color: $white;
+            }
+            i {
+                font-size: 17px;
+                color: $white;
+            }
+        }
+    }
+}

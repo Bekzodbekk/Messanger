@@ -1,0 +1,13 @@
+@import "../../vars";
+
+.container{
+    display: flex;
+    min-height: 100vh;
+    height: 100vh;
+    background: $black;
+    overflow-y: hidden;
+}
+
+.direct__container{
+    flex: 1;
+}

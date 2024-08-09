@@ -1,0 +1,20 @@
+@import "../../../vars";
+
+.avatar{
+    position: relative;
+    img{
+        border-radius: 50%;
+        height: 45px;
+        width: 45px;
+    }
+    .status{
+        border: 3px solid $black;
+        position: absolute;
+        top: 33px;
+        left: 30px;
+        background: $green;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+    }
+}

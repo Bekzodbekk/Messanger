@@ -1,0 +1,135 @@
+[
+    {
+        "id": 1,
+        "full_name": "Akbar Aliyev",
+        "avatar_image": "../../../Assets/avatarsImage/avatar_11.jpg",
+        "notReadMessage": 5,
+        "status": "online"
+    },
+    {
+        "id": 2,
+        "full_name": "Ne'matov Bekzod",
+        "avatar_image": "../../../Assets/avatarsImage/avatar_2.jpg",
+        "notReadMessage": 0,
+        "status": "offline"
+    },
+    {
+        "id": 3,
+        "full_name": "Karimov Anvar",
+        "avatar_image": "../../../Assets/avatarsImage/avatar_3.png",
+        "notReadMessage": 2,
+        "status": "online"
+    },
+    {
+        "id": 4,
+        "full_name": "Salimov Asad",
+        "avatar_image": "../../../Assets/avatarsImage/avatar_4.jpg",
+        "notReadMessage": 0,
+        "status": "offline"
+    },
+    {
+        "id": 5,
+        "full_name": "Rahimov Baxtiyor",
+        "avatar_image": "../../../Assets/avatarsImage/avatar_5.jpg",
+        "notReadMessage": 3,
+        "status": "online"
+    },
+    {
+        "id": 6,
+        "full_name": "Ibragimov Dilshod",
+        "avatar_image": "../../../Assets/avatarsImage/avatar_6.jpg",
+        "notReadMessage": 2,
+        "status": "offline"
+    },
+    {
+        "id": 7,
+        "full_name": "Mahmudov Erkin",
+        "avatar_image": "../../../Assets/avatarsImage/avatar_7.jpg",
+        "notReadMessage": 2,
+        "status": "online"
+    },
+    {
+        "id": 8,
+        "full_name": "Tursunov Farhod",
+        "avatar_image": "../../../Assets/avatarsImage/avatar_8.jpg",
+        "notReadMessage": 1,
+        "status": "offline"
+    },
+    {
+        "id": 9,
+        "full_name": "Yusupov G'ani",
+        "avatar_image": "../../../Assets/avatarsImage/avatar_9.jpg",
+        "notReadMessage": 2,
+        "status": "online"
+    },
+    {
+        "id": 10,
+        "full_name": "Zokirov Hikmat",
+        "avatar_image": "../../../Assets/avatarsImage/avatar_10.jpg",
+        "notReadMessage": 0,
+        "status": "offline"
+    },
+    {
+        "id": 11,
+        "full_name": "Xo'jayev Ilyos",
+        "avatar_image": "../../../Assets/avatarsImage/avatar_11.jpg",
+        "notReadMessage": 9,
+        "status": "online"
+    },
+    {
+        "id": 12,
+        "full_name": "Rasulov Jamil",
+        "avatar_image": "../../../Assets/avatarsImage/avatar_12.jpg",
+        "notReadMessage": 2,
+        "status": "offline"
+    },
+    {
+        "id": 13,
+        "full_name": "Sobirov Kamol",
+        "avatar_image": "../../../Assets/avatarsImage/avatar_13.jpg",
+        "notReadMessage": 6,
+        "status": "online"
+    },
+    {
+        "id": 14,
+        "full_name": "To'xtayev Laziz",
+        "avatar_image": "../../../Assets/avatarsImage/avatar_14.jpg",
+        "notReadMessage": 2,
+        "status": "offline"
+    },
+    {
+        "id": 15,
+        "full_name": "Umarov Mirzohid",
+        "avatar_image": "../../../Assets/avatarsImage/avatar_15.jpg",
+        "notReadMessage": 0,
+        "status": "online"
+    },
+    {
+        "id": 16,
+        "full_name": "Vahobov Rustam",
+        "avatar_image": "../../../Assets/avatarsImage/avatar_16.jpg",
+        "notReadMessage": 4,
+        "status": "offline"
+    },
+    {
+        "id": 17,
+        "full_name": "Hasanov Shavkat",
+        "avatar_image": "../../../Assets/avatarsImage/avatar_17.png",
+        "notReadMessage": 2,
+        "status": "online"
+    },
+    {
+        "id": 18,
+        "full_name": "Davlatov Timur",
+        "avatar_image": "../../../Assets/avatarsImage/avatar_18.png",
+        "notReadMessage": 2,
+        "status": "offline"
+    },
+    {
+        "id": 19,
+        "full_name": "Eshonov Umid",
+        "avatar_image": "../../../Assets/avatarsImage/avatar_19.png",
+        "notReadMessage": 0,
+        "status": "online"
+    }
+]
