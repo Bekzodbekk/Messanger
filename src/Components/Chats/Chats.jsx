@@ -1,38 +1,42 @@
-import React, { useState, useEffect } from 'react'
-import "./chats.scss"
-import DirectItem from "./DirectItems/DirectItem"
-import userData from "../../Database/Directs.json"
-import messageData from "../../Database/Message.json"
+import React, { useState, useEffect } from 'react';
+import "./chats.scss";
+import DirectItem from "./DirectItems/DirectItem";
+import userData from "../../Database/Directs.json";
+import messageData from "../../Database/Message.json";
 
 const Chats = (props) => {
-
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredUserData, setFilteredUserData] = useState([]);
 
     useEffect(() => {
-        // myAccount.id bilan teng bo'lmagan va izlash so'ziga mos kelgan foydalanuvchilarni filterlash
         const filtered = userData.filter(user => {
             if (user.id === props.myAccount.id) return false;
-            
+
             const fullName = user.full_name?.toLowerCase() || '';
             const username = user.username?.toLowerCase() || '';
             const searchTermLower = searchTerm.toLowerCase();
-            
+
             return fullName.includes(searchTermLower) || username.includes(searchTermLower);
         }).map(user => {
-            // Har bir foydalanuvchiga tegishli eng oxirgi xabarni olish
             const userMessages = messageData.filter(msg => 
                 (msg.sender_id === user.id && msg.receiver_id === props.myAccount.id) ||
                 (msg.receiver_id === user.id && msg.sender_id === props.myAccount.id)
             );
-            
+
             const lastMessage = userMessages.length > 0 
                 ? userMessages.reduce((prev, current) => (new Date(current.timestamp) > new Date(prev.timestamp)) ? current : prev)
                 : null;
-            
+
+            // 24 soatlik formatda soat va daqiqalarni olish uchun options
+            const timeOptions = { hour: '2-digit', minute: '2-digit', hour12: false };
+            const lastMessageTime = lastMessage 
+                ? new Date(lastMessage.timestamp).toLocaleTimeString([], timeOptions)
+                : "";
+
             return {
                 ...user,
                 lastMessage: lastMessage ? lastMessage.message : "No messages yet",
+                lastMessageTime: lastMessageTime,
             };
         });
 
@@ -76,6 +80,7 @@ const Chats = (props) => {
                                 GetHandlerDirectElement={props.GetHandlerDirectElement} 
                                 element={elm} 
                                 lastMessage={elm.lastMessage}
+                                lastMessageTime={elm.lastMessageTime}
                             />
                         ))}
                     </div>
@@ -85,4 +90,4 @@ const Chats = (props) => {
     )
 }
 
-export default Chats
+export default Chats;

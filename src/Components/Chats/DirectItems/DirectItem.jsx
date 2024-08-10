@@ -4,7 +4,7 @@ import Avatar from '../Avatar/Avatar'
 
 const DirectItem = (props) => {
     console.log(props.lastMessage);
-    
+
     return (
         <>
             <div onClick={() => props.GetHandlerDirectElement(props.element)} key={props.element} className="direct__item">
@@ -19,7 +19,7 @@ const DirectItem = (props) => {
 
                 </div>
                 <div className="direct__message__info">
-                    <p className='message__time'>{ }</p>
+                    <p className='message__time'>{props.lastMessageTime}</p>
                 </div>
             </div>
         </>
