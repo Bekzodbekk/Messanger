@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     padding: 10px 10px;
     border-radius: 10px;
     &:hover{
@@ -15,14 +16,19 @@
         align-items: center;
         
         .direct__item__info{
+            width: 200px;
             margin-left: 14px;
+            
             .full__name{
                 font-size: 18px;
                 color: $white;
             }
-            .message{
+            .message {
                 font-size: 13px;
                 color: $gray100;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
     }

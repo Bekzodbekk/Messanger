@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react'
 import "./chats.scss"
 import DirectItem from "./DirectItems/DirectItem"
 import userData from "../../Database/Directs.json"
+import messageData from "../../Database/Message.json"
 
 const Chats = (props) => {
+
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredUserData, setFilteredUserData] = useState([]);
 
@@ -17,7 +19,23 @@ const Chats = (props) => {
             const searchTermLower = searchTerm.toLowerCase();
             
             return fullName.includes(searchTermLower) || username.includes(searchTermLower);
+        }).map(user => {
+            // Har bir foydalanuvchiga tegishli eng oxirgi xabarni olish
+            const userMessages = messageData.filter(msg => 
+                (msg.sender_id === user.id && msg.receiver_id === props.myAccount.id) ||
+                (msg.receiver_id === user.id && msg.sender_id === props.myAccount.id)
+            );
+            
+            const lastMessage = userMessages.length > 0 
+                ? userMessages.reduce((prev, current) => (new Date(current.timestamp) > new Date(prev.timestamp)) ? current : prev)
+                : null;
+            
+            return {
+                ...user,
+                lastMessage: lastMessage ? lastMessage.message : "No messages yet",
+            };
         });
+
         setFilteredUserData(filtered);
     }, [searchTerm, props.myAccount.id]);
 
@@ -57,6 +75,7 @@ const Chats = (props) => {
                                 key={elm.id} 
                                 GetHandlerDirectElement={props.GetHandlerDirectElement} 
                                 element={elm} 
+                                lastMessage={elm.lastMessage}
                             />
                         ))}
                     </div>
