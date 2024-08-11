@@ -2,11 +2,12 @@
     {
         "id": 1,
         "full_name": "Akbar Aliyev",
+        "username": "asuman",
         "avatar_image": "../../../Assets/avatarsImage/avatar_11.jpg"
     },
     {
         "id": 2,
-        "full_name": "Ne'matov Bekzod",
+        "full_name": "Bekzod",
         "avatar_image": "../../../Assets/avatarsImage/avatar_2.jpg"
     },
     {

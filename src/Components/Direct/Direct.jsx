@@ -20,10 +20,10 @@ const Direct = (props) => {
                     <Avatar />
                     <div className="direct_info">
                         <div className="name">
-                            <h1>{props.user.full_name}</h1>
+                            <h1>{props.user.first_name} {props.user.last_name}</h1>
                         </div>
                         <div className="status">
-                            <p>Last seen 1 minut ago</p>
+                            <p>@{props.user.username}</p>
                         </div>
                     </div>
                 </div>

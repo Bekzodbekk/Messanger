@@ -1,24 +1,30 @@
+// App.js
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import { useState } from "react";
-import Chats from "../Chats/Chats";
-import Direct from "../Direct/Direct";
-import Nav from "../navbar/Nav";
-import "./app.scss"
-import directData from "../../Database/Directs.json"
+import Verify from "../Register/Verify/Verify";
+import Signin from "../Register/Signin/Signin";
+import "./app.scss";
+import Signup from "../Register/Signup/Signup";
+import Main from "../Main/Main";
 
 function App() {
-  const [user, setUser] = useState(0)
-  function GetHandlerDirectElement(user){
-    setUser(user)
-  }
-  
-  const myAccount = directData[1]
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
 
   return (
-    <div className="container">
-      <Nav />
-      <Chats myAccount={myAccount} GetHandlerDirectElement={(elm) => GetHandlerDirectElement(elm)}/>
-      <Direct myAccount={myAccount} user={user}/>
-    </div>
+    <Router>
+      <div className="container">
+        <Routes>
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/verify" element={<Verify />} />
+          <Route path="/signin" element={<Signin setIsAuthenticated={setIsAuthenticated} />} />
+          <Route 
+            path="/main" 
+            element={isAuthenticated ? <Main /> : <Navigate to="/signin" />} 
+          />
+          <Route path="*" element={<Navigate to="/signup" />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./nav.scss";
+import Avatar from '../Chats/Avatar/Avatar';
 
 const Nav = () => {
     const [activeMenu, setActiveMenu] = useState("message");
@@ -16,7 +17,8 @@ const Nav = () => {
         <div className='nav__container'>
             <div className="menu__container">
                 <div className="logo">
-                    <img src={require("../../Assets/logo.png")} alt="Logo" />
+                    <Avatar />
+                    {/* <img src={require("../../Assets/logo.png")} alt="Logo" /> */}
                 </div>
                 <span></span>
                 <div className="menus">

@@ -1,0 +1,62 @@
+@import "../../../vars";
+
+.signin__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+
+    .box{
+        background: $gray50;
+        padding: 30px 50px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        .title{
+            text-align: center;
+            h1{
+                font-size: 40px;
+                font-weight: 500;
+                color: $purple;
+            }
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            row-gap: 14px;
+            margin: 40px 0px;
+            .inputData{
+                background-color: $gray100;
+                outline: none;
+                border: none;
+                padding: 0 15px;
+                color: #fff;
+                font-size: 15px;
+                border-radius: 10px;
+                height: 40px;
+                width: 280px;
+                
+                &::placeholder{
+                    color: #ffffff79;
+                }
+            }
+            button{
+                margin-top: 8px;
+                cursor: pointer;
+                height: 43px;
+                background-color: $purple;
+                outline: none;
+                border: 2px solid $purple;
+                border-radius: 10px;
+                color: #fff;
+                font-size: 20px;
+                transition: .1s linear;
+
+                &:hover{
+                    background: transparent;
+                }
+            }            
+        }
+    }
+}
