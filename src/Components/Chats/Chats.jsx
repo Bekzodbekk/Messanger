@@ -28,7 +28,7 @@ const Chats = (props) => {
         } else {
             setFilteredUserData([]);
         }
-    }, [searchTerm, props.myAccount.id]);
+    }, [searchTerm, props.myAccount.user.id]);
 
     const handleSearch = (event) => {
         setSearchTerm(event.target.value);
